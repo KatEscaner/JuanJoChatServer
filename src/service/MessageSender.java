@@ -13,8 +13,7 @@ public class MessageSender extends Thread{
     ObjectOutputStream objOut;
     User user;
     Message message;
-    FileOutputStream fileOut;
-    ObjectOutputStream fileObjOut;
+
 
 
     public MessageSender(ObjectOutputStream objOut, User user){

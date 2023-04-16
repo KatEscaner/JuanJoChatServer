@@ -20,7 +20,6 @@ public class ClientHandler implements Runnable{
     final UserDAO userDAO = new UserDAO();
     final GroupDAO groupDAO = new GroupDAO();
     User user = null;
-    boolean exit = false;
 
     // get a socket since the socketServer
     public ClientHandler(Socket s){
