@@ -66,7 +66,7 @@ public abstract class ScramShaSaslClient implements SaslClient {
     protected static final int MINIMUM_ITERATIONS = 4096;
     protected static final String GS2_CBIND_FLAG = "n";
     protected static final byte[] CLIENT_KEY = "Client Key".getBytes();
-    protected static final byte[] SERVER_KEY = "Server Key".getBytes();
+    protected static final byte[] SERVER_KEY = "Server.Server Key".getBytes();
 
     protected String authorizationId;
     protected String authenticationId;
@@ -177,7 +177,7 @@ public abstract class ScramShaSaslClient implements SaslClient {
                     String clientFinalMessage = clientFinalMessageWithoutProof + ",p=" + Base64.getEncoder().encodeToString(clientProof);
 
                     // Compute ServerSignature (for future verification):
-                    //   ServerKey       := HMAC(SaltedPassword, "Server Key")
+                    //   ServerKey       := HMAC(SaltedPassword, "Server.Server Key")
                     //   ServerSignature := HMAC(ServerKey, AuthMessage)
                     byte[] serverKey = hmac(saltedPassword, SERVER_KEY);
                     this.serverSignature = hmac(serverKey, StringUtils.getBytes(authMessage, "UTF-8"));

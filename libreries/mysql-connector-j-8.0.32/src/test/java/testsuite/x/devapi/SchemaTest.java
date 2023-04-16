@@ -437,7 +437,7 @@ public class SchemaTest extends DevApiBaseTestCase {
 
                 // TSFR6b: Call createCollection(collectionName, createCollectionOptions) method against server which doesn't support validation parameter for `create_collection` X Protocol command,
                 // eg. MySQL 5.7. Ensure that server responds with error code 5015 and that Connector/J wraps it to WrongArgumentException with message
-                // "The server doesn't support the requested operation. Please update the MySQL Server and or Client library".
+                // "The server doesn't support the requested operation. Please update the MySQL Server.Server and or Client library".
                 assertThrows(WrongArgumentException.class, Messages.getString("Schema.CreateCollection"), new Callable<Void>() {
                     public Void call() throws Exception {
                         SchemaTest.this.schema.createCollection(collName1,
@@ -452,7 +452,7 @@ public class SchemaTest extends DevApiBaseTestCase {
 
                 // TSFR6c: Call modifyCollection(String collectionName, ModifyCollectionOptions options) method against server which doesn't implement `modify_collection_options` X Protocol command,
                 // eg. MySQL 5.7. Ensure that server responds with error code 5157 and that Connector/J wraps it to WrongArgumentException with message
-                // "The server doesn't support the requested operation. Please update the MySQL Server and or Client library".
+                // "The server doesn't support the requested operation. Please update the MySQL Server.Server and or Client library".
                 assertThrows(WrongArgumentException.class, Messages.getString("Schema.CreateCollection"), new Callable<Void>() {
                     public Void call() throws Exception {
                         SchemaTest.this.schema.modifyCollection(collName1,

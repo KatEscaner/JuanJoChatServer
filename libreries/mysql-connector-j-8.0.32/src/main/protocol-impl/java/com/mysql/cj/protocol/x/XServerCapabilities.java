@@ -55,7 +55,7 @@ public class XServerCapabilities implements ServerCapabilities {
     static String SUBKEY_COMPRESSION_SERVER_COMBINE_MIXED_MESSAGES = "server_combine_mixed_messages";
     static String SUBKEY_COMPRESSION_SERVER_MAX_COMBINE_MESSAGES = "server_max_combine_messages";
 
-    /** Server-assigned client-id. */
+    /** Server.Server-assigned client-id. */
     private long clientId = -1;
 
     public XServerCapabilities(Map<String, Any> capabilities) {

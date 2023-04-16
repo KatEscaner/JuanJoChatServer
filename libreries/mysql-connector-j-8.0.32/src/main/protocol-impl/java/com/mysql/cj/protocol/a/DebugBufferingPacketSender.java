@@ -72,7 +72,7 @@ public class DebugBufferingPacketSender implements MessageSender<NativePacketPay
 
         packetDump.append("Client ");
         packetDump.append(packet.toString());
-        packetDump.append("--------------------> Server\n");
+        packetDump.append("--------------------> Server.Server\n");
         packetDump.append("\nPacket payload:\n\n");
         packetDump.append(packetPayload);
 

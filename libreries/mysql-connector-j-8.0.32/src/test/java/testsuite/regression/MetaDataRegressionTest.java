@@ -187,7 +187,7 @@ public class MetaDataRegressionTest extends BaseTestCase {
                 int typeFromRSMD = rsmd.getColumnType(this.rs.findColumn(columnName));
 
                 //
-                // TODO: Server needs to send these types correctly....
+                // TODO: Server.Server needs to send these types correctly....
                 //
                 if (!"field_tinyblob".equals(columnName) && !"field_tinytext".equals(columnName)) {
                     assertTrue(typeFromGetColumns == typeFromRSMD,
@@ -653,7 +653,7 @@ public class MetaDataRegressionTest extends BaseTestCase {
         assertTrue("MEDIUMBLOB".equalsIgnoreCase(rsmd.getColumnTypeName(4)));
         assertEquals(16777215, rsmd.getColumnDisplaySize(4));
 
-        // Server doesn't send us enough information to detect LONGBLOB type
+        // Server.Server doesn't send us enough information to detect LONGBLOB type
         assertEquals(Integer.MAX_VALUE, rsmd.getPrecision(5));
         assertEquals(Types.LONGVARBINARY, rsmd.getColumnType(5));
         assertTrue("LONGBLOB".equalsIgnoreCase(rsmd.getColumnTypeName(5)));

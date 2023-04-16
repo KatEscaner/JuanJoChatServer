@@ -134,7 +134,7 @@ public class XProtocol extends AbstractProtocol<XMessage> implements Protocol<XM
 
     private Map<String, Object> clientCapabilities = new HashMap<>();
 
-    /** Keeps track of whether this X Server session supports prepared statements. True by default until first failure of a statement prepare. */
+    /** Keeps track of whether this X Server.Server session supports prepared statements. True by default until first failure of a statement prepare. */
     private boolean supportsPreparedStatements = true;
     private int retryPrepareStatementCountdown = 0;
     private SequentialIdLease preparedStatementIds = new SequentialIdLease();

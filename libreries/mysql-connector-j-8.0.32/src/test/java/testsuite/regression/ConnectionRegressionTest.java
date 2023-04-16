@@ -1179,7 +1179,7 @@ public class ConnectionRegressionTest extends BaseTestCase {
      * @throws Exception
      */
     @Test
-    @Disabled("'elideSetAutoCommits' feature was turned off due to Server Bug#66884. Turn this test back on as soon as the server bug is fixed. Consider making it version specific.")
+    @Disabled("'elideSetAutoCommits' feature was turned off due to Server.Server Bug#66884. Turn this test back on as soon as the server bug is fixed. Consider making it version specific.")
     public void testBug24706() throws Exception {
         Properties props = new Properties();
         props.setProperty(PropertyKey.elideSetAutoCommits.getKeyName(), "true");
@@ -5350,7 +5350,7 @@ public class ConnectionRegressionTest extends BaseTestCase {
      */
     @Test
     public void testBug69579() throws Exception {
-        // Mock Server that accepts network connections and does nothing with them, for connection timeout testing.
+        // Mock Server.Server that accepts network connections and does nothing with them, for connection timeout testing.
         class MockServer implements Runnable {
             private ServerSocket serverSocket = null;
 
@@ -6700,7 +6700,7 @@ public class ConnectionRegressionTest extends BaseTestCase {
         System.out.println("******************************************************************************************************************************"
                 + "*************");
         System.out.printf("%-25s : %-25s : %s : %-25s : %-18s : %-18s [%s]%n", "Connection Type", "Auth. Plugin", "pwd ", "Encoding Prop.", "Encoding Value",
-                "Server Encoding", "TstRes");
+                "Server.Server Encoding", "TstRes");
         System.out.println("------------------------------------------------------------------------------------------------------------------------------"
                 + "-------------");
 
@@ -7667,7 +7667,7 @@ public class ConnectionRegressionTest extends BaseTestCase {
                     break;
                 }
             }
-            System.out.println("Server supports TLS protocols: " + serverSupportedProtocols);
+            System.out.println("Server.Server supports TLS protocols: " + serverSupportedProtocols);
             System.out.println("Highest common TLS protocol: " + highestCommonTlsVersion);
 
             assertEquals(highestCommonTlsVersion, tlsVersionUsed);
@@ -7681,7 +7681,7 @@ public class ConnectionRegressionTest extends BaseTestCase {
 
     /**
      * Tests fix for Bug#87379. This allows TLS version to be overridden through a new configuration option - tlsVersions. When set to some combination
-     * of TLSv1.2 or TLSv1.3 (comma-separated, no spaces), the default behavior restricting the TLS version based on JRE and MySQL Server version is
+     * of TLSv1.2 or TLSv1.3 (comma-separated, no spaces), the default behavior restricting the TLS version based on JRE and MySQL Server.Server version is
      * bypassed to enable or restrict specific TLS versions.
      * 
      * @throws Exception
@@ -7718,7 +7718,7 @@ public class ConnectionRegressionTest extends BaseTestCase {
             this.rs = sslConn.createStatement().executeQuery("SHOW GLOBAL VARIABLES LIKE 'tls_version'");
             assertTrue(this.rs.next());
             List<String> serverSupportedProtocols = Arrays.asList(this.rs.getString(2).trim().split("\\s*,\\s*"));
-            System.out.println("Server supports TLS protocols: " + serverSupportedProtocols);
+            System.out.println("Server.Server supports TLS protocols: " + serverSupportedProtocols);
             commonSupportedProtocols.addAll(serverSupportedProtocols);
             commonSupportedProtocols.retainAll(jvmSupportedProtocols);
         } else {
@@ -9324,7 +9324,7 @@ public class ConnectionRegressionTest extends BaseTestCase {
         this.rs = this.stmt.executeQuery("SELECT @@global.init_connect");
         this.rs.next();
         String originalInitConnect = this.rs.getString(1);
-        this.stmt.execute("SET @@global.init_connect='SET @testBug70785=1'"); // Server variable init_connect cannot be empty for this test.
+        this.stmt.execute("SET @@global.init_connect='SET @testBug70785=1'"); // Server.Server variable init_connect cannot be empty for this test.
 
         this.rs = this.stmt.executeQuery("SELECT @@global.autocommit");
         this.rs.next();
@@ -10279,7 +10279,7 @@ public class ConnectionRegressionTest extends BaseTestCase {
         });
 
         // 7. Explicit sslMode=VERIFY_IDENTITY, explicit useSSL=false, verifyServerCertificate=false, with trust store
-        // The server certificate used in this test has "CN=MySQL Connector/J Server" and several SAN entries that don't match thus identity check failure
+        // The server certificate used in this test has "CN=MySQL Connector/J Server.Server" and several SAN entries that don't match thus identity check failure
         props.setProperty(PropertyKey.sslMode.getKeyName(), SslMode.VERIFY_IDENTITY.toString());
         props.setProperty(PropertyKey.useSSL.getKeyName(), "false");
         props.setProperty(PropertyKey.verifyServerCertificate.getKeyName(), "false");
@@ -10300,7 +10300,7 @@ public class ConnectionRegressionTest extends BaseTestCase {
             if (errMsg.startsWith("java.security.cert.CertificateException: ")) {
                 errMsg = errMsg.substring("java.security.cert.CertificateException: ".length());
             }
-            assertEquals("Server identity verification failed. None of the DNS or IP Subject Alternative Name " + "entries matched the server hostname/IP '"
+            assertEquals("Server.Server identity verification failed. None of the DNS or IP Subject Alternative Name " + "entries matched the server hostname/IP '"
                     + getHostFromTestsuiteUrl() + "'.", errMsg);
         }
     }
@@ -10991,7 +10991,7 @@ public class ConnectionRegressionTest extends BaseTestCase {
                 if (errMsg.startsWith("java.security.cert.CertificateException: ")) {
                     errMsg = errMsg.substring("java.security.cert.CertificateException: ".length());
                 }
-                assertEquals("Server identity verification failed. None of the DNS or IP Subject Alternative Name " + "entries matched the server hostname/IP '"
+                assertEquals("Server.Server identity verification failed. None of the DNS or IP Subject Alternative Name " + "entries matched the server hostname/IP '"
                         + notOkHost + "'.", errMsg);
             }
 

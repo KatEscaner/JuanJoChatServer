@@ -1189,7 +1189,7 @@ public final class MysqlxNotice {
   /**
    * <pre>
    **
-   *Server-side warnings and notes
+   *Server.Server-side warnings and notes
    *&#64;par ``.scope`` == ``local``
    *``.level``, ``.code`` and ``.msg`` map the content of:
    *&#64;code{sql}
@@ -1668,7 +1668,7 @@ public final class MysqlxNotice {
     /**
      * <pre>
      **
-     *Server-side warnings and notes
+     *Server.Server-side warnings and notes
      *&#64;par ``.scope`` == ``local``
      *``.level``, ``.code`` and ``.msg`` map the content of:
      *&#64;code{sql}

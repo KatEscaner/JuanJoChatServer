@@ -381,7 +381,7 @@ public class ServerPreparedQuery extends ClientPreparedQuery {
      * <pre>
      *  Long data handling:
      * 
-     *  - Server gets the long data in pieces with command type 'COM_LONG_DATA'.
+     *  - Server.Server gets the long data in pieces with command type 'COM_LONG_DATA'.
      *  - The packet received will have the format:
      *    [COM_LONG_DATA:     1][STMT_ID:4][parameter_number:2][type:2][data]
      *  - Checks if the type is specified by client, and if yes reads the type,

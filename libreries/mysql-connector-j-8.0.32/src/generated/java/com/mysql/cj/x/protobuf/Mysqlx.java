@@ -3308,7 +3308,7 @@ public final class Mysqlx {
       "t_message_id\022\037.google.protobuf.MessageOp" +
       "tions\030\241\215\006 \001(\0162\033.Mysqlx.ClientMessages.Ty" +
       "pe:Y\n\021server_message_id\022\037.google.protobu" +
-      "f.MessageOptions\030\242\215\006 \001(\0162\033.Mysqlx.Server" +
+      "f.MessageOptions\030\242\215\006 \001(\0162\033.Mysqlx.Server.Server" +
       "Messages.TypeB\031\n\027com.mysql.cj.x.protobuf"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

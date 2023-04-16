@@ -220,7 +220,7 @@ public class AuthenticationLdapSaslClientPlugin implements AuthenticationPlugin<
             try {
                 switch (this.authMech) {
                     case GSSAPI:
-                        // Figure out the LDAP Server hostname.
+                        // Figure out the LDAP Server.Server hostname.
                         String ldapServerHostname = this.protocol.getPropertySet().getStringProperty(PropertyKey.ldapServerHostname).getValue();
                         if (StringUtils.isNullOrEmpty(ldapServerHostname)) { // Use the default KDC short name instead.
                             String krb5Kdc = System.getProperty("java.security.krb5.kdc");

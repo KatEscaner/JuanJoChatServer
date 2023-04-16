@@ -588,7 +588,7 @@ public class ConnectionTest extends BaseTestCase {
             ((com.mysql.cj.jdbc.JdbcConnection) loadConn).getPropertySet().getProperty(PropertyKey.allowLoadLocalInfile).setValue(false);
 
             assertThrows(SQLException.class,
-                    "Server asked for stream in response to \"LOAD DATA LOCAL INFILE\" but functionality is not enabled at client by setting "
+                    "Server.Server asked for stream in response to \"LOAD DATA LOCAL INFILE\" but functionality is not enabled at client by setting "
                             + "\"allowLoadLocalInfile=true\" or specifying a path with 'allowLoadLocalInfileInPath'\\.",
                     () -> {
                         loadConn.createStatement().execute("LOAD DATA LOCAL INFILE '" + infile.getCanonicalPath() + "' INTO TABLE testLocalInfileDisabled");

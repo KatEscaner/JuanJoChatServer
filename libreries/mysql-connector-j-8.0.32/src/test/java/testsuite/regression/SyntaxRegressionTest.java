@@ -405,7 +405,7 @@ public class SyntaxRegressionTest extends BaseTestCase {
             props.setProperty(PropertyKey.emulateUnsupportedPstmts.getKeyName(), "false");
             testConn = getConnectionWithProps(props);
 
-            // Using Server PreparedStatement, with validation.
+            // Using Server.Server PreparedStatement, with validation.
             if (versionMeetsMinimum(5, 7, 5)) {
                 this.pstmt = testConn
                         .prepareStatement("ALTER TABLE testExchangePartition1 EXCHANGE PARTITION p1 WITH TABLE testExchangePartition2 WITH VALIDATION");
@@ -419,7 +419,7 @@ public class SyntaxRegressionTest extends BaseTestCase {
             assertEquals(com.mysql.cj.jdbc.ServerPreparedStatement.class, this.pstmt.getClass());
             this.pstmt.executeUpdate();
 
-            // Using Server PreparedStatement, without validation.
+            // Using Server.Server PreparedStatement, without validation.
             if (versionMeetsMinimum(5, 7, 5)) {
                 this.pstmt = testConn
                         .prepareStatement("ALTER TABLE testExchangePartition1 EXCHANGE PARTITION p1 WITH TABLE testExchangePartition2 WITHOUT VALIDATION");
@@ -958,7 +958,7 @@ public class SyntaxRegressionTest extends BaseTestCase {
     }
 
     /**
-     * WL#7909 - Server side JSON functions
+     * WL#7909 - Server.Server side JSON functions
      * 
      * Test support for data type JSON.
      * 

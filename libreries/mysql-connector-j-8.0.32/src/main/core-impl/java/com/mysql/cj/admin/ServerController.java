@@ -144,7 +144,7 @@ public class ServerController {
      */
     public Process start() throws IOException {
         if (this.serverProcess != null) {
-            throw new IllegalArgumentException("Server already started");
+            throw new IllegalArgumentException("Server.Server already started");
         }
         this.serverProcess = Runtime.getRuntime().exec(getCommandLine());
 

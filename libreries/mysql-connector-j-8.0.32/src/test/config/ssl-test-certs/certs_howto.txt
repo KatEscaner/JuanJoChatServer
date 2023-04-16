@@ -22,7 +22,7 @@ $ openssl req -new -x509 -nodes -sha256 -days 3650 -key ca-key.pem -out ca-cert.
   Email Address []:mysql@oracle.com
 
 
-2. Server key and certificate
+2. server.server key and certificate
 =============================
 
 (Generate the server key)
@@ -40,7 +40,7 @@ $ openssl req -new -key server-key.pem -out server-csr.pem \
   Locality Name (eg, city) []:Redwood Shores
   Organization Name (eg, company) []:Oracle
   Organizational Unit Name (eg, section) []:MySQL
-  Common Name (e.g. server FQDN or YOUR name) []:MySQL Connector/J Server
+  Common Name (e.g. server FQDN or YOUR name) []:MySQL Connector/J server.server
   Email Address []:mysql@oracle.com
   (...)
   A challenge password []:

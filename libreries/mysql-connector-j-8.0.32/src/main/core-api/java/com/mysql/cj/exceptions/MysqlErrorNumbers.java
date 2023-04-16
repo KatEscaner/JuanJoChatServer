@@ -93,7 +93,7 @@ public final class MysqlErrorNumbers {
     public final static int ER_TABLE_EXISTS_ERROR = 1050; //SQLSTATE: 42S01 Message: Table '%s' already exists
     public final static int ER_BAD_TABLE_ERROR = 1051; //SQLSTATE: 42S02 Message: Unknown table '%s'
     public final static int ER_NON_UNIQ_ERROR = 1052; //SQLSTATE: 23000 Message: Column '%s' in %s is ambiguous
-    public final static int ER_SERVER_SHUTDOWN = 1053; //SQLSTATE: 08S01 Message: Server shutdown in progress
+    public final static int ER_SERVER_SHUTDOWN = 1053; //SQLSTATE: 08S01 Message: Server.Server shutdown in progress
     public final static int ER_BAD_FIELD_ERROR = 1054; //SQLSTATE: 42S22 Message: Unknown column '%s' in '%s'
     public final static int ER_WRONG_FIELD_WITH_GROUP = 1055; //SQLSTATE: 42000 Message: '%s' isn't in GROUP BY
     public final static int ER_WRONG_GROUP_FIELD = 1056; //SQLSTATE: 42000 Message: Can't group on '%s'
@@ -347,7 +347,7 @@ public final class MysqlErrorNumbers {
     @Deprecated
     public final static int ER_SLAVE_IGNORED_SSL_PARAMS = 1274;
     public final static int ER_REPLICA_IGNORED_SSL_PARAMS = 1274; //SQLSTATE: HY000 Message: SSL parameters in CHANGE SOURCE are ignored because this MySQL replica was compiled without SSL support; they can be used later if MySQL replica with SSL is started
-    public final static int ER_SERVER_IS_IN_SECURE_AUTH_MODE = 1275; //SQLSTATE: HY000 Message: Server is running in --secure-auth mode, but '%s'@'%s' has a password in the old format; please change the password to the new format
+    public final static int ER_SERVER_IS_IN_SECURE_AUTH_MODE = 1275; //SQLSTATE: HY000 Message: Server.Server is running in --secure-auth mode, but '%s'@'%s' has a password in the old format; please change the password to the new format
     public final static int ER_WARN_FIELD_RESOLVED = 1276; //SQLSTATE: HY000 Message: Field or reference '%s%s%s%s%s' of SELECT #%d was resolved in SELECT #%d
     @Deprecated
     public final static int ER_BAD_SLAVE_UNTIL_COND = 1277;
@@ -451,7 +451,7 @@ public final class MysqlErrorNumbers {
     public final static int ER_PASSWD_LENGTH = 1372; //SQLSTATE: HY000 Message: Password hash should be a %d-digit hexadecimal number
     public final static int ER_UNKNOWN_TARGET_BINLOG = 1373; //SQLSTATE: HY000 Message: Target log not found in binlog index
     public final static int ER_IO_ERR_LOG_INDEX_READ = 1374; //SQLSTATE: HY000 Message: I/O error reading log index file
-    public final static int ER_BINLOG_PURGE_PROHIBITED = 1375; //SQLSTATE: HY000 Message: Server configuration does not permit binlog purge
+    public final static int ER_BINLOG_PURGE_PROHIBITED = 1375; //SQLSTATE: HY000 Message: Server.Server configuration does not permit binlog purge
     public final static int ER_FSEEK_FAIL = 1376; //SQLSTATE: HY000 Message: Failed on fseek()
     public final static int ER_BINLOG_PURGE_FATAL_ERR = 1377; //SQLSTATE: HY000 Message: Fatal error during log purge
     public final static int ER_LOG_IN_USE = 1378; //SQLSTATE: HY000 Message: A purgeable log is in use, will not purge

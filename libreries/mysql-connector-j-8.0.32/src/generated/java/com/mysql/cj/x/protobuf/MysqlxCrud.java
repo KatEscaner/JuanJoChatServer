@@ -148,7 +148,7 @@ public final class MysqlxCrud {
   /**
    * <pre>
    **
-   *ViewAlgorithm defines how MySQL Server processes the view
+   *ViewAlgorithm defines how MySQL Server.Server processes the view
    * </pre>
    *
    * Protobuf enum {@code Mysqlx.Crud.ViewAlgorithm}
@@ -21009,7 +21009,7 @@ public final class MysqlxCrud {
 
     /**
      * <pre>
-     ** defines how MySQL Server processes the view 
+     ** defines how MySQL Server.Server processes the view
      * </pre>
      *
      * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3 [default = UNDEFINED];</code>
@@ -21018,7 +21018,7 @@ public final class MysqlxCrud {
     boolean hasAlgorithm();
     /**
      * <pre>
-     ** defines how MySQL Server processes the view 
+     ** defines how MySQL Server.Server processes the view
      * </pre>
      *
      * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3 [default = UNDEFINED];</code>
@@ -21312,7 +21312,7 @@ public final class MysqlxCrud {
     private int algorithm_;
     /**
      * <pre>
-     ** defines how MySQL Server processes the view 
+     ** defines how MySQL Server.Server processes the view
      * </pre>
      *
      * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3 [default = UNDEFINED];</code>
@@ -21323,7 +21323,7 @@ public final class MysqlxCrud {
     }
     /**
      * <pre>
-     ** defines how MySQL Server processes the view 
+     ** defines how MySQL Server.Server processes the view
      * </pre>
      *
      * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3 [default = UNDEFINED];</code>
@@ -22410,7 +22410,7 @@ public final class MysqlxCrud {
       private int algorithm_ = 1;
       /**
        * <pre>
-       ** defines how MySQL Server processes the view 
+       ** defines how MySQL Server.Server processes the view
        * </pre>
        *
        * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3 [default = UNDEFINED];</code>
@@ -22421,7 +22421,7 @@ public final class MysqlxCrud {
       }
       /**
        * <pre>
-       ** defines how MySQL Server processes the view 
+       ** defines how MySQL Server.Server processes the view
        * </pre>
        *
        * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3 [default = UNDEFINED];</code>
@@ -22435,7 +22435,7 @@ public final class MysqlxCrud {
       }
       /**
        * <pre>
-       ** defines how MySQL Server processes the view 
+       ** defines how MySQL Server.Server processes the view
        * </pre>
        *
        * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3 [default = UNDEFINED];</code>
@@ -22453,7 +22453,7 @@ public final class MysqlxCrud {
       }
       /**
        * <pre>
-       ** defines how MySQL Server processes the view 
+       ** defines how MySQL Server.Server processes the view
        * </pre>
        *
        * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3 [default = UNDEFINED];</code>
@@ -23081,7 +23081,7 @@ public final class MysqlxCrud {
 
     /**
      * <pre>
-     ** defined how MySQL Server processes the view 
+     ** defined how MySQL Server.Server processes the view
      * </pre>
      *
      * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3;</code>
@@ -23090,7 +23090,7 @@ public final class MysqlxCrud {
     boolean hasAlgorithm();
     /**
      * <pre>
-     ** defined how MySQL Server processes the view 
+     ** defined how MySQL Server.Server processes the view
      * </pre>
      *
      * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3;</code>
@@ -23364,7 +23364,7 @@ public final class MysqlxCrud {
     private int algorithm_;
     /**
      * <pre>
-     ** defined how MySQL Server processes the view 
+     ** defined how MySQL Server.Server processes the view
      * </pre>
      *
      * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3;</code>
@@ -23375,7 +23375,7 @@ public final class MysqlxCrud {
     }
     /**
      * <pre>
-     ** defined how MySQL Server processes the view 
+     ** defined how MySQL Server.Server processes the view
      * </pre>
      *
      * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3;</code>
@@ -24400,7 +24400,7 @@ public final class MysqlxCrud {
       private int algorithm_ = 1;
       /**
        * <pre>
-       ** defined how MySQL Server processes the view 
+       ** defined how MySQL Server.Server processes the view
        * </pre>
        *
        * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3;</code>
@@ -24411,7 +24411,7 @@ public final class MysqlxCrud {
       }
       /**
        * <pre>
-       ** defined how MySQL Server processes the view 
+       ** defined how MySQL Server.Server processes the view
        * </pre>
        *
        * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3;</code>
@@ -24425,7 +24425,7 @@ public final class MysqlxCrud {
       }
       /**
        * <pre>
-       ** defined how MySQL Server processes the view 
+       ** defined how MySQL Server.Server processes the view
        * </pre>
        *
        * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3;</code>
@@ -24443,7 +24443,7 @@ public final class MysqlxCrud {
       }
       /**
        * <pre>
-       ** defined how MySQL Server processes the view 
+       ** defined how MySQL Server.Server processes the view
        * </pre>
        *
        * <code>optional .Mysqlx.Crud.ViewAlgorithm algorithm = 3;</code>

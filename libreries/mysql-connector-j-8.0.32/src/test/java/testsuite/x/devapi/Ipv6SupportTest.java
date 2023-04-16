@@ -80,7 +80,7 @@ public class Ipv6SupportTest extends DevApiBaseTestCase {
      */
     @Test
     public void testIpv6SupportInSession() {
-        assumeTrue(mysqlVersionMeetsMinimum(ServerVersion.parseVersion("5.7.17")), "Server version 5.7.17 or higher is required.");
+        assumeTrue(mysqlVersionMeetsMinimum(ServerVersion.parseVersion("5.7.17")), "Server.Server version 5.7.17 or higher is required.");
 
         // Although per specification IPv6 addresses must be enclosed by square brackets, we actually support them directly.
         String[] urls = new String[] { "mysqlx://%s:%s@%s:%d", "mysqlx://%s:%s@[%s]:%d", "mysqlx://%s:%s@(address=%s:%d)", "mysqlx://%s:%s@(address=[%s]:%d)",

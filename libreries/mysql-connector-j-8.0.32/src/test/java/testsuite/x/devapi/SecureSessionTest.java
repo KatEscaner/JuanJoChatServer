@@ -343,26 +343,26 @@ public class SecureSessionTest extends DevApiBaseTestCase {
      */
     @Test
     public void testSecureSessionMissingTrustStore() {
-        assertThrows(CJCommunicationsException.class, "No truststore provided to verify the Server certificate\\.",
+        assertThrows(CJCommunicationsException.class, "No truststore provided to verify the Server.Server certificate\\.",
                 () -> this.fact.getSession(this.sslFreeBaseUrl + makeParam(PropertyKey.xdevapiFallbackToSystemTrustStore, "false")
                         + makeParam(PropertyKey.xdevapiSslMode, XdevapiSslMode.VERIFY_CA)));
 
-        assertThrows(CJCommunicationsException.class, "No truststore provided to verify the Server certificate\\.",
+        assertThrows(CJCommunicationsException.class, "No truststore provided to verify the Server.Server certificate\\.",
                 () -> this.fact.getSession(this.sslFreeBaseUrl + makeParam(PropertyKey.xdevapiFallbackToSystemTrustStore, "false")
                         + makeParam(PropertyKey.xdevapiSslMode, XdevapiSslMode.VERIFY_IDENTITY)));
 
         Properties props = new Properties(this.sslFreeTestProperties);
         props.setProperty(PropertyKey.xdevapiFallbackToSystemTrustStore.getKeyName(), "false");
         props.setProperty(PropertyKey.xdevapiSslMode.getKeyName(), XdevapiSslMode.VERIFY_CA.toString());
-        assertThrows(CJCommunicationsException.class, "No truststore provided to verify the Server certificate\\.", () -> this.fact.getSession(props));
+        assertThrows(CJCommunicationsException.class, "No truststore provided to verify the Server.Server certificate\\.", () -> this.fact.getSession(props));
 
         props.setProperty(PropertyKey.xdevapiSslMode.getKeyName(), XdevapiSslMode.VERIFY_IDENTITY.toString());
-        assertThrows(CJCommunicationsException.class, "No truststore provided to verify the Server certificate\\.", () -> this.fact.getSession(props));
+        assertThrows(CJCommunicationsException.class, "No truststore provided to verify the Server.Server certificate\\.", () -> this.fact.getSession(props));
     }
 
     /**
      * Tests exception thrown on verifying server certificate identity failure.
-     * The server certificate used in this test has "CN=MySQL Connector/J Server".
+     * The server certificate used in this test has "CN=MySQL Connector/J Server.Server".
      */
     @Test
     public void testSecureSessionVerifyServerCertificateIdentityFailure() {
@@ -795,7 +795,7 @@ public class SecureSessionTest extends DevApiBaseTestCase {
                 break;
             }
         }
-        System.out.println("Server supports TLS protocols: " + serverSupportedProtocols);
+        System.out.println("Server.Server supports TLS protocols: " + serverSupportedProtocols);
         System.out.println("Highest common TLS protocol: " + highestCommonTlsVersion);
 
         return highestCommonTlsVersion;

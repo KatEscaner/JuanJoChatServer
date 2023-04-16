@@ -595,7 +595,7 @@ public class CallableStatementRegressionTest extends BaseTestCase {
             assertEquals(100, this.rs.getInt(2));
         }
 
-        assertTrue(this.pstmt.getClass().getName().indexOf("Server") == -1);
+        assertTrue(this.pstmt.getClass().getName().indexOf("server") == -1);
     }
 
     @Test

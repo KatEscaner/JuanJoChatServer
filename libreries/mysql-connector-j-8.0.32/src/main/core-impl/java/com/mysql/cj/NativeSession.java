@@ -199,7 +199,7 @@ public class NativeSession extends CoreSession implements Serializable {
 
     @Override
     public boolean isSetNeededForAutoCommitMode(boolean autoCommitFlag) {
-        // Server Bug#66884 (SERVER_STATUS is always initiated with SERVER_STATUS_AUTOCOMMIT=1) invalidates "elideSetAutoCommits" feature.
+        // Server.Server Bug#66884 (SERVER_STATUS is always initiated with SERVER_STATUS_AUTOCOMMIT=1) invalidates "elideSetAutoCommits" feature.
         // TODO Turn this feature back on as soon as the server bug is fixed. Consider making it version specific.
         //return this.protocol.getServerSession().isSetNeededForAutoCommitMode(autoCommitFlag,
         //        getPropertySet().getBooleanReadableProperty(PropertyKey.elideSetAutoCommits).getValue());

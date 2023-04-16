@@ -360,7 +360,7 @@ public class ConnectionImpl implements JdbcConnection, SessionEventListener, Ser
     }
 
     /**
-     * Creates a connection to a MySQL Server.
+     * Creates a connection to a MySQL Server.Server.
      * 
      * @param hostInfo
      *            the {@link HostInfo} instance that contains the host, user and connections attributes for this connection
@@ -853,7 +853,7 @@ public class ConnectionImpl implements JdbcConnection, SessionEventListener, Ser
                     this.session.setQueryInterceptors(this.queryInterceptors);
                 }
 
-                // Server properties might be different from previous connection, so initialize again...
+                // Server.Server properties might be different from previous connection, so initialize again...
                 initializePropsFromServer();
 
                 if (isForReconnect) {
@@ -951,7 +951,7 @@ public class ConnectionImpl implements JdbcConnection, SessionEventListener, Ser
 
             this.session.setQueryInterceptors(this.queryInterceptors);
 
-            // Server properties might be different from previous connection, so initialize again...
+            // Server.Server properties might be different from previous connection, so initialize again...
             initializePropsFromServer();
 
             if (isForReconnect) {
@@ -1311,7 +1311,7 @@ public class ConnectionImpl implements JdbcConnection, SessionEventListener, Ser
                 .setMetadataCollationIndex(this.session.getServerSession().getCharsetSettings().getMetadataCollationIndex());
 
         //
-        // Server can do this more efficiently for us
+        // Server.Server can do this more efficiently for us
         //
 
         setupServerForTruncationChecks();
@@ -1327,7 +1327,7 @@ public class ConnectionImpl implements JdbcConnection, SessionEventListener, Ser
     private void handleAutoCommitDefaults() throws SQLException {
         boolean resetAutoCommitDefault = false;
 
-        // Server Bug#66884 (SERVER_STATUS is always initiated with SERVER_STATUS_AUTOCOMMIT=1) invalidates "elideSetAutoCommits" feature.
+        // Server.Server Bug#66884 (SERVER_STATUS is always initiated with SERVER_STATUS_AUTOCOMMIT=1) invalidates "elideSetAutoCommits" feature.
         // TODO Turn this feature back on as soon as the server bug is fixed. Consider making it version specific.
         // if (!getPropertySet().getBooleanReadableProperty(PropertyKey.elideSetAutoCommits).getValue()) {
         String initConnectValue = this.session.getServerSession().getServerVariable("init_connect");

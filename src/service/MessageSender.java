@@ -2,6 +2,7 @@ package service;
 
 import model.Message;
 import model.User;
+import server.Server;
 
 import java.io.*;
 import java.net.SocketException;
@@ -31,7 +32,7 @@ public class MessageSender extends Thread{
                     message = Server.messageQueue.getNextMessage(user.getId());
                     // Send the message
                     objOut.writeObject(message);
-                    // Save the message in Server
+                    // Save the message in Server.Server
                     if(message.getId() > 0)
                         addMessageToListAndWriteToFile(message, user.getId());
                     // Delete message from the queue

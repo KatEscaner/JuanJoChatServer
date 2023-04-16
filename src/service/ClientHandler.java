@@ -3,6 +3,7 @@ package service;
 import dao.GroupDAO;
 import dao.UserDAO;
 import model.*;
+import server.Server;
 
 import java.io.DataOutputStream;
 import java.io.IOException;

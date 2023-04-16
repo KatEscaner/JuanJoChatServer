@@ -139,7 +139,7 @@ public class Security {
      */
     public static byte[] scrambleCachingSha2(byte[] password, byte[] seed) throws DigestException {
         /*
-         * Server does it in 4 steps (see sql/auth/sha2_password_common.cc Generate_scramble::scramble method):
+         * Server.Server does it in 4 steps (see sql/auth/sha2_password_common.cc Generate_scramble::scramble method):
          * 
          * SHA2(src) => digest_stage1
          * SHA2(digest_stage1) => digest_stage2

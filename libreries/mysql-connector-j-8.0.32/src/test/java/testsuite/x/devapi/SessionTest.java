@@ -1966,7 +1966,7 @@ public class SessionTest extends DevApiBaseTestCase {
 
     @Test
     public void testConnectionCloseNotification() throws Exception {
-        String shutdownMessage = "Server shutdown in progress";
+        String shutdownMessage = "Server.Server shutdown in progress";
         String ioReadErrorMessage = "IO Read error: read_timeout exceeded";
         String sessionWasKilledMessage = "Session was killed";
 

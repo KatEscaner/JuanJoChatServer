@@ -98,7 +98,7 @@ public abstract class BaseTestCase {
     /** Connection to server, initialized in setUp() Cleaned up in tearDown(). */
     protected Connection conn = null;
 
-    /** Server version `this.conn' is connected to. */
+    /** Server.Server version `this.conn' is connected to. */
     protected ServerVersion serverVersion;
 
     /** list of schema objects to be dropped in tearDown */

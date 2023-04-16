@@ -266,7 +266,7 @@ public class ExportControlled {
         }
 
         if (required && StringUtils.isNullOrEmpty(trustStoreUrl)) {
-            throw new CJCommunicationsException("No truststore provided to verify the Server certificate.");
+            throw new CJCommunicationsException("No truststore provided to verify the Server.Server certificate.");
         }
 
         return new KeyStoreConf(trustStoreUrl, trustStorePassword, trustStoreType);
@@ -446,7 +446,7 @@ public class ExportControlled {
                             }
                         }
                         if (sanVerification && !hostNameVerified) {
-                            throw new CertificateException("Server identity verification failed. "
+                            throw new CertificateException("Server.Server identity verification failed. "
                                     + "None of the DNS or IP Subject Alternative Name entries matched the server hostname/IP '" + this.hostName + "'.");
                         }
                     }
@@ -470,7 +470,7 @@ public class ExportControlled {
 
                         if (!verifyHostName(cn)) {
                             throw new CertificateException(
-                                    "Server identity verification failed. The certificate Common Name '" + cn + "' does not match '" + this.hostName + "'.");
+                                    "Server.Server identity verification failed. The certificate Common Name '" + cn + "' does not match '" + this.hostName + "'.");
                         }
                     }
                 }
