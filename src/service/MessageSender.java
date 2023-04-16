@@ -31,7 +31,7 @@ public class MessageSender extends Thread{
                     message = Server.messageQueue.getNextMessage(user.getId());
                     // Send the message
                     objOut.writeObject(message);
-                    // Save the message in Server.Server
+                    // Save the message in message file
                     if(message.getId() > 0)
                         addMessageToListAndWriteToFile(message, user.getId());
                     // Delete message from the queue
@@ -52,7 +52,7 @@ public class MessageSender extends Thread{
     //Return file's message list
     public static List<Message> readMessagesFromList(Long userID) {
         List<Message> messages = new ArrayList<>();
-        String MESSAGE_STORAGE_PATH = "src/messageStorage/";
+        final String MESSAGE_STORAGE_PATH = "src/messageStorage/";
         File file = new File(MESSAGE_STORAGE_PATH + userID + ".txt");
         try{
             if(!file.exists()){
@@ -77,7 +77,7 @@ public class MessageSender extends Thread{
     public void addMessageToListAndWriteToFile(Message message, Long userId) {
         List<Message> messages = readMessagesFromList(userId);
         messages.add(message);
-        String MESSAGE_STORAGE_PATH = "src/messageStorage/";
+        final String MESSAGE_STORAGE_PATH = "src/messageStorage/";
         File file = new File(MESSAGE_STORAGE_PATH + userId + ".txt");
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
             oos.writeObject(messages);
