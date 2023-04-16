@@ -1,3 +1,5 @@
+package dao;
+
 import model.Group;
 import model.Message;
 

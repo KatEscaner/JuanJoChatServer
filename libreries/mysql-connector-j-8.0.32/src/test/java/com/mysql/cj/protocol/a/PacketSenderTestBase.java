@@ -40,7 +40,7 @@ public class PacketSenderTestBase {
     /**
      * Get a no-op packet sender that can be used when testing decorators.
      * 
-     * @return a MessageSender
+     * @return a Service.MessageSender
      */
     protected MessageSender<NativePacketPayload> getNoopPacketSender() {
         return new MessageSender<NativePacketPayload>() {

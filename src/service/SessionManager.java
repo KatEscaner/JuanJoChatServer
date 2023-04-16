@@ -1,3 +1,5 @@
+package service;
+
 import model.Session;
 
 import java.util.concurrent.ConcurrentHashMap;

@@ -1,3 +1,7 @@
+import service.ClientHandler;
+import service.SessionManager;
+import util.MessageQueue;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -20,7 +24,7 @@ public class Server {
             while(true){
                 Socket service = server.accept();
                 System.out.println("Connection established");
-                // create a ClientHandler Thread with a socket which is connected with client
+                // create a Service.ClientHandler Thread with a socket which is connected with client
                 executor.execute(new ClientHandler(service));
             }
         } catch (IOException e){

@@ -1,3 +1,5 @@
+package dao;
+
 import model.User;
 import model.UserCredentials;
 

@@ -1,3 +1,7 @@
+package service;
+
+import dao.GroupDAO;
+import dao.UserDAO;
 import model.*;
 
 import java.io.DataOutputStream;
@@ -95,7 +99,7 @@ public class ClientHandler implements Runnable{
         }
     }
 
-    // Get a connection since ConnectionPool
+    // Get a connection since Service.ConnectionPool
     public void connect(){
         try{
             con = ConnectionPool.getConnection();

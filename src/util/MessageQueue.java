@@ -1,3 +1,6 @@
+package util;
+
+import dao.GroupDAO;
 import model.Message;
 
 import java.io.*;
