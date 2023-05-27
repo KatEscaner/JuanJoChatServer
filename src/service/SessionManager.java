@@ -28,10 +28,6 @@ public class SessionManager {
         sessions.put(session.getUserID(), session);
     }
 
-    public synchronized Session getSession(long userID) {
-        return sessions.get(userID);
-    }
-
     public synchronized void closeSession(long userID){
         sessions.get(userID).sendCloseSignal();
         sessions.remove(userID);
